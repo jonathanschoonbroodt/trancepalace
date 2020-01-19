@@ -1,0 +1,108 @@
+html {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial;
+}
+body {
+  margin: 0;
+}
+.affiche-container {
+  background: url("../img/affiche.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+.cta-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.blackfade,
+.button-container {
+  max-width: 640px;
+  width: 100%;
+  height: 320px;
+  border-radius: 18px;
+}
+@media (max-width: 780px), (max-height: 640px) {
+  .blackfade,
+  .button-container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.blackfade {
+  position: absolute;
+  background-color: black;
+  opacity: 0.75;
+}
+.button-container {
+  padding: 5%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.button {
+  padding: 0.6em 1.8em;
+  margin: 2em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 18px;
+  transition: background 0.35s ease 0s;
+}
+.button.-white {
+  background-color: black;
+  color: white;
+}
+.button.-white.-empty {
+  color: white;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: white;
+}
+.button.-white.-empty:hover {
+  color: black;
+  background-color: white;
+}
+._flex {
+  display: flex;
+  flex-direction: row;
+}
+._flex.-inlineflex {
+  display: inline-flex;
+}
+._flex.-wrap {
+  flex-wrap: wrap;
+}
+._flex.-start {
+  justify-content: flex-start !important;
+}
+._flex.-end {
+  justify-content: flex-end !important;
+}
+._flex.-spacebetween {
+  justify-content: space-between !important;
+}
+._flex.-spacearound {
+  justify-content: space-around !important;
+}
+._flex.-center.-h {
+  justify-content: center !important;
+}
+._flex.-center.-v {
+  align-items: center !important;
+}

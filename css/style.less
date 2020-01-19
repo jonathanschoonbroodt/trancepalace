@@ -1,0 +1,107 @@
+html {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial;
+}
+body {
+  margin: 0;
+}
+.affiche-container {
+  background: url("../img/affiche.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+.cta-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.blackfade, .button-container {
+  max-width: 640px;
+  width: 100%;
+  height: 320px;
+  border-radius: 18px;
+  @media (max-width: 780px), (max-height: 640px) {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.blackfade {
+  position: absolute;
+  background-color: black;
+  opacity: 0.75;
+}
+.button-container {
+  padding: 5%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.button {
+  padding: .6em 1.8em;
+  margin: 2em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 18px;
+  transition: background .35s ease 0s;
+  &.-white {
+    background-color: black;
+    color: white;
+    &.-empty {
+      color: white;
+      background-color: transparent;
+      border: 1px solid;
+      border-color: white;
+      &:hover {
+        color: black;
+        background-color: white;
+      }
+    }
+  }
+}
+// flex
+._flex {
+  display: flex;
+  flex-direction: row;
+  &.-inlineflex {
+    display: inline-flex;
+  }
+  &.-wrap {
+    flex-wrap: wrap;
+  }
+  &.-start {
+    justify-content: flex-start !important;
+  }
+  &.-end {
+    justify-content: flex-end !important;
+  }
+  &.-spacebetween {
+    justify-content: space-between !important;
+  }
+  &.-spacearound {
+    justify-content: space-around !important;
+  }
+  &.-center {
+    &.-h {
+      justify-content: center !important;
+    }
+    &.-v {
+      align-items: center !important;
+    }
+  }
+}
