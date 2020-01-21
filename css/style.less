@@ -1,106 +1,111 @@
 // SELECTEUR
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('fonts/helvetica.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Helvetica Neue';
+  src: url("fonts/HelveticaNeue.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 html {
-    font-family: Helvetica Neue, Open Sans, Roboto,  Arial, sans-serif, ;
-    background: url("../img/background.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  font-family: Helvetica Neue, Open Sans, Roboto, Arial, sans-serif,;
+  background: url("../img/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
-
 body {
-    background: linear-gradient(-45deg, rgba(34, 101, 119, 0.4), rgba(90, 64, 73, 0.38), rgba(1, 39, 56, 0.7), rgba(241, 243, 244, 0.7));
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    margin: 0;
-    color: white;
-    text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, rgba(34, 101, 119, 0.4), rgba(90, 64, 73, 0.38), rgba(1, 39, 56, 0.7), rgba(241, 243, 244, 0.7));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  color: white;
+  text-align: center;
 }
 li {
-    display: block;
+  display: block;
 }
 ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-    margin-left: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  margin-left: 0;
 }
 .main {
-    min-height: 100%
+  min-height: 100%;
 }
 .wrapper {
-    padding: 5%;
+  padding: 2.5%;
 }
 .baseline-container {
-    > h2.baseline {
-        font-size: 100%;
-        font-weight: 100;
-    }
+  > h2.baseline {
+    font-size: 100%;
+    font-weight: 100;
+  }
 }
 .logo-container {
-    > h1.trancepalace {
-        display: none;
-    }
-    > img.logo {
-        width: 100%;
-        max-width: 960px;
-    }
+  > h1.trancepalace {
+    display: none;
+  }
+  > a > img.logo {
+    width: 960px;
+    max-width: 100%;
+  }
 }
 .infos-container {
-    > div.dateandplace-container {
-        > h2.dateandplace {
-            font-size: 100%;
-            padding: .25em;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-        }
+  > div.dateandplace-container {
+    > h2.dateandplace {
+      font-size: 100%;
+      padding: .25em;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
     }
-    > div.lineup-container {
-        > p.order {
+  }
+  > div.lineup-container {
+    > p.order {
+      color: #1D556D;
+      font-weight: 800;
+      font-size: 65%;
+    }
+    > ul.lineup-list {
+      > li.lineup-element {
+        padding: 5.5px;
+        > h3.artist {
+          text-transform: uppercase;
+          font-size: 65%;
+          > span.nationality {
             color: #1D556D;
-            font-weight: 800;
-            font-size: 65%;
+          }
+          > span.introduce {
+            text-transform: lowercase;
+            color: #efefefef;
+          }
         }
-        > ul.lineup-list {
-            > li.lineup-element {
-                padding: 5.5px;
-                > h3.artist {
-                    font-size: 65%;
-                        > span.nationality {
-                        color: #1D556D;
-                    }
-                }
-            }
-        }
-        > ul.logosartist-list {
-            > li.logosartist-element {
-                > img.logo {
-                    max-width: 120px;
-                    width: 100%;
-                }
-            }
-        }
+      }
     }
+    > ul.logosartist-list {
+      > li.logosartist-element {
+        padding: 2.5%;
+        > img.logo {
+          max-width: 120px;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 .ticketerie-container {
   > div.ticketseller-container {
@@ -116,8 +121,7 @@ ul {
       text-decoration: none;
       border: none;
       border-radius: 5px;
-      margin: .5em;
-      margin-top: 1em;
+      margin: 1em .5em .5em;
       font-weight: 800;
       &.-fnac {
         background-color: #E0A824;
@@ -128,37 +132,45 @@ ul {
     }
   }
 }
+.copyright-container {
+  > p.copyright {
+    color: lightgray;
+    > a {
+      color: white;
+    }
+  }
+}
 // flex
 ._flex {
-    display: flex;
-    flex-direction: row;
-    &.-inlineflex {
-        display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  &.-inlineflex {
+    display: inline-flex;
+  }
+  &.-column {
+    flex-flow: column;
+  }
+  &.-wrap {
+    flex-wrap: wrap;
+  }
+  &.-start {
+    justify-content: flex-start !important;
+  }
+  &.-end {
+    justify-content: flex-end !important;
+  }
+  &.-spacebetween {
+    justify-content: space-between !important;
+  }
+  &.-spacearound {
+    justify-content: space-around !important;
+  }
+  &.-center {
+    &.-h {
+      justify-content: center !important;
     }
-    &.-column {
-        flex-flow: column;
+    &.-v {
+      align-items: center !important;
     }
-    &.-wrap {
-        flex-wrap: wrap;
-    }
-    &.-start {
-        justify-content: flex-start !important;
-    }
-    &.-end {
-        justify-content: flex-end !important;
-    }
-    &.-spacebetween {
-        justify-content: space-between !important;
-    }
-    &.-spacearound {
-        justify-content: space-around !important;
-    }
-    &.-center {
-        &.-h {
-            justify-content: center !important;
-        }
-        &.-v {
-            align-items: center !important;
-        }
-    }
+  }
 }

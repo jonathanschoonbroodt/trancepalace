@@ -24,7 +24,6 @@ html {
   }
 }
 body {
-  min-height: 100vh;
   background: linear-gradient(-45deg, rgba(34, 101, 119, 0.4), rgba(90, 64, 73, 0.38), rgba(1, 39, 56, 0.7), rgba(241, 243, 244, 0.7));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -47,7 +46,7 @@ ul {
   min-height: 100%;
 }
 .wrapper {
-  padding: 2.5%;
+  padding: 5%;
 }
 .baseline-container > h2.baseline {
   font-size: 100%;
@@ -57,8 +56,8 @@ ul {
   display: none;
 }
 .logo-container > a > img.logo {
-  width: 960px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 960px;
 }
 .infos-container > div.dateandplace-container > h2.dateandplace {
   font-size: 100%;
