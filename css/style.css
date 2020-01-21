@@ -116,6 +116,7 @@ ul {
   background-color: #009CDE;
 }
 .copyright-container > p.copyright {
+  max-width: 240px;
   color: lightgray;
 }
 .copyright-container > p.copyright > a {
