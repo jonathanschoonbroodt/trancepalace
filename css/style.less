@@ -72,6 +72,25 @@ ul {
       padding: .25em;
       border-top: 1px solid white;
       border-bottom: 1px solid white;
+      > span.newdate {
+          z-index: 1;
+          position: relative;
+          bottom: 2.5px;
+          left: 5px;
+          > span.rotatefix {
+              font-size: 10px;
+              width: 100px;
+              position: absolute;
+              transform-origin: 0 0;
+              transform: rotate(5deg);
+              padding: 0.15em;
+              background-color: yellow;
+              color: #012738;
+          }
+      }
+      > span.olddate {
+          z-index: 0;
+      }
     }
   }
   > div.lineup-container {
