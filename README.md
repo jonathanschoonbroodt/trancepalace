@@ -1,2 +1,2 @@
 # trancepalace
-Page de redirection vers le ticketing pour la soirée Trancepalace. Consultable en ligne via http://www.trancepalace.be.
+A landing who redirect to ticketing for the Trance Palace party. Available online : http://www.trancepalace.be.
